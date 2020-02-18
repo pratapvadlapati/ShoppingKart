@@ -1,6 +1,7 @@
 # ShoppingKart
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
+Server is built on Node JS, the whole project servers the shoppingKart experience using mongo db as datastore.
 
 ## Development server
 
@@ -21,6 +22,11 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## To Start Server
+
+cd server
+node app.js
 
 ## Further help
 
