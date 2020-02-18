@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'shoppingKart';
+  
+ constructor(private _router: Router){}
+
+  //routing-functions
+  login(){
+    this._router.navigate(['/login'])
+  }
+
+  //user-profile
+  userProfile(){
+    this._router.navigate(['/user'])
+  }
+
+  //show wishlist
+  showWishlist(){
+    //yet to implement component
+  }
+
+  goTocart(){
+    this._router.navigate(['/cart'])
+  }
+
+
 }

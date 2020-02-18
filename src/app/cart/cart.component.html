@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="container"  style="padding-bottom: 3em">
+            <div class="row  bg-light" style="height: 5rem;padding-bottom: 6rem"  *ngFor="let item of cart?.items">
+                <div class="col-md-6" style="height: 5rem;">
+                        <i class="fa fa-check" aria-hidden="true" style="color: green;padding-right: 2rem;"></i>    
+                <img src="http://localhost:3000/{{item?.imagePath}}" alt="..." class="img-thumbnail" style="height: 5rem;">
+                <span style="color: green; padding-left: 1rem"><strong>Added to Cart</strong></span>
+              
+                </div>
+               
+                <div class="col-md-3" style="height: 5rem;padding-top: 1rem">
+                    <p><strong>{{item?.name}}</strong></p>
+                </div>
+    
+                <div class="col-md-3" style="height: 5rem;padding-top: 1rem">
+                        <span style="padding-left: 5rem"><strong><span>Price: </span>{{item?.price}}<span> INR</span></strong></span>
+                    </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 bg-warning">                                   
+<div id="accordion"  *ngIf="cart?.items">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Price Details:
+          </button>
+        </h5>
+      </div>
+  
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+                <p class="text-right">Vat: 2%</p>
+                <p class="text-right">GST: 2%</p>
+                <p class="text-right">Delivery Charges: 50  &#8377;</p>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <p class="text-right">Total: <span><strong style="color: red">{{cart?.items.formattedPrice}}</strong> &#8377;</span></p>
+        <button class="btn btn-success" style="float:right">Place Order</button>
+      </div>
+      </div>
+      </div>
+      <div *ngIf="!cart?.items">
+        <p>No items were added</p>
+      </div>
+                </div>
+            </div>
+          </div>
+          
+</div>
